@@ -10,5 +10,6 @@ public interface MovieRepo extends JpaRepository<Movie, Integer> {
 
     List<Movie> findByTitle(@Param("title") String title);
 
-    List<Movie> findByActorsLike(@Param("actor") String actor);
+    List<Movie> findByActorsContaining(@Param("actor") String actor);
+
 }
