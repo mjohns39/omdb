@@ -2,7 +2,6 @@
 #Step 1:  Copy scripts to container
 docker cp src/main/resources/db_scripts omdb_localdb_1:/
 
-
 #Step 2:  Create Database
 docker exec -it omdb_localdb_1 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P WillBaumann365 -i /db_scripts/db/create-fourthwall-db.sql
 
