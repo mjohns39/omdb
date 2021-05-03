@@ -14,5 +14,7 @@ services:
     image: mljohns89/fourthwall-omdb:latest
     ports:
       - 8080:8080
+    environment:
+      - LOCAL_DB_HOST=localdb
 volumes:
   localdbdata:

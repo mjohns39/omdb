@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: "jdbc:sqlserver://localhost:1433;databaseName=fourthwall;useLOBs=false"
+    url: jdbc:sqlserver://${LOCAL_DB_HOST:localhost}:1433;databaseName=fourthwall;useLOBs=false
     username: "sa"
     password: "WillBaumann365"
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver

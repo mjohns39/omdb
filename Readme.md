@@ -16,7 +16,7 @@ This project requires Docker.  Please install if you do not have already.  Instr
 
 1. Clone the repo:  https://github.com/mjohns39/omdb.  Change directory to the project root
 2. Run the command `docker-compose pull`   
-3. Run the command `docker-compose up -d localdb`.  Wait ~10 seconds to allow the database to startup
+3. Run the command `docker-compose up -d localdb`.  Wait ~20 seconds to allow the database to startup
 4. Run the command `bash src/main/resources/setup_scripts/setup_database.sh`
 5. Run the command `docker-compose up -d`
 6. Optionally, you can tail the logs with `docker-compose logs -f`
