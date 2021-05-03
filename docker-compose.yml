@@ -10,9 +10,9 @@ services:
       - ACCEPT_EULA=Y
     volumes:
       - "localdbdata:/var/opt/mssql"
-#  omdb:
-#    image: mljohns89/fourthwall-omdb:latest
-#    ports:
-#      - 8080:8080
+  omdb:
+    image: mljohns89/fourthwall-omdb:latest
+    ports:
+      - 8080:8080
 volumes:
   localdbdata:

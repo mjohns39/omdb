@@ -24,15 +24,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .httpBasic()
                 .and()
+                .csrf().disable()
                 .authorizeRequests()
                 .antMatchers(AUTH_WHITELIST).permitAll()
-                .antMatchers("/movies/**/*").permitAll()
-                .antMatchers("/users/**/*").permitAll()
-                .antMatchers("/criticRatings/**/*").permitAll()
-                .antMatchers("/userRatings/**/*").permitAll()
-                .antMatchers(HttpMethod.GET, "/movieShowtimes/**/*").permitAll()
+                .antMatchers("/movies/**").permitAll()
+                .antMatchers("/users/**").permitAll()
+                .antMatchers("/criticRatings/**").permitAll()
+                .antMatchers("/userRatings/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/movieShowtimes/**").permitAll()
                 .anyRequest()
                 .authenticated()
+
         ;
     }
 

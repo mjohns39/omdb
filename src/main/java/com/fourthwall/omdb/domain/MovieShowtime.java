@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "movie_showtimes", schema = "dbo")
@@ -32,7 +33,7 @@ public class MovieShowtime {
     private Integer minuteOfDay;
 
     @Column(name = "price")
-    private Double price;
+    private BigDecimal price;
 
     @JsonBackReference
     @ManyToOne
